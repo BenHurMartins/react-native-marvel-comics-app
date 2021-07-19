@@ -6,22 +6,28 @@ const HOST = 'https://gateway.marvel.com/v1/public';
 
 export const api = axios.create({baseURL: HOST});
 
+let cacheGetCharacters = {};
+
 export const getCharacters = name => {
-  console.log('test');
   return new Promise((resolve, reject) => {
-    let ts = new Date().getTime();
-    const hash = getHash(ts);
-    api
-      .get(
-        `/characters?nameStartsWith=${name}&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`,
-      )
-      .then(({data}) => {
-        resolve(data.data.results);
-      })
-      .catch(error => {
-        console.log(error);
-        reject(error);
-      });
+    if (cacheGetCharacters[name]) {
+      resolve(cacheGetCharacters[name]);
+    } else {
+      let ts = new Date().getTime();
+      const hash = getHash(ts);
+      api
+        .get(
+          `/characters?nameStartsWith=${name}&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`,
+        )
+        .then(({data}) => {
+          cacheGetCharacters[name] = data.data.results;
+          resolve(data.data.results);
+        })
+        .catch(error => {
+          console.log(error);
+          reject(error);
+        });
+    }
   });
 };
 

@@ -14,9 +14,15 @@ const FavoriteChar = ({favoriteChar}) => {
     <View style={{width: '100%'}}>
       <Image
         source={{
-          uri: `${favoriteChar.thumbnail?.path.toString()}/portrait_uncanny.jpg`,
+          uri: `${favoriteChar.thumbnail?.path.toString()}/portrait_uncanny.jpg`.replace(
+            'http://',
+            'https://',
+          ),
         }}
         style={{height: 150, width: 100, resizeMode: 'contain'}}
+        resizeMode={'contain'}
+        height={120}
+        width={120}
       />
       <TouchableOpacity
         onPress={() => navigation.navigate('ListComics', {favoriteChar})}>
