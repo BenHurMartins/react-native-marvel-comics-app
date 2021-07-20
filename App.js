@@ -12,6 +12,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './src/scenes/home';
 import ListComics from './src/scenes/listComics';
+import {Colors} from './src/styles';
 
 //Redux
 import reducers from './src/reducers';
@@ -33,7 +34,14 @@ const App = () => {
             component={Home}
             options={{headerShown: false}}
           />
-          <Stack.Screen name="ListComics" component={ListComics} />
+          <Stack.Screen
+            name="ListComics"
+            component={ListComics}
+            options={{
+              title: 'List of Comics',
+              // headerBackground: {backgroundColor: Colors.BACKGROUND},
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

@@ -7,6 +7,7 @@ const HOST = 'https://gateway.marvel.com/v1/public';
 export const api = axios.create({baseURL: HOST});
 
 let cacheGetCharacters = {};
+let cacheGetCharacterComics = {};
 
 export const getCharacters = name => {
   return new Promise((resolve, reject) => {
@@ -21,6 +22,30 @@ export const getCharacters = name => {
         )
         .then(({data}) => {
           cacheGetCharacters[name] = data.data.results;
+          resolve(data.data.results);
+        })
+        .catch(error => {
+          console.log(error);
+          reject(error);
+        });
+    }
+  });
+};
+export const getCharacterComics = id => {
+  console.log('chamou aqui com id', id);
+  return new Promise((resolve, reject) => {
+    if (cacheGetCharacterComics[id]) {
+      resolve(cacheGetCharacterComics[id]);
+    } else {
+      let ts = new Date().getTime();
+      const hash = getHash(ts);
+      api
+        .get(
+          `/characters/${id.toString()}/comics?&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`,
+        )
+        .then(({data}) => {
+          console.log(data.data.results);
+          cacheGetCharacterComics[id] = data.data.results;
           resolve(data.data.results);
         })
         .catch(error => {

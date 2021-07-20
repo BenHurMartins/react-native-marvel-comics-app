@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -8,43 +8,35 @@ import {
   View,
 } from 'react-native';
 import {useRoute} from '@react-navigation/native';
+import {getCharacterComics} from '../../services/api';
+import {ListItemComic} from '../../components/';
+import {Colors} from '../../styles/';
 
 const ListComics = () => {
   const route = useRoute();
   const {favoriteChar} = route.params;
+  const [comics, setComics] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getCharacterComics(favoriteChar.id).then(setComics).catch(console.log);
+  }, []);
 
   comicListItem = item => {
-    console.log('comic');
-    console.log(item);
-    return <Text>{item.name}</Text>;
+    return <ListItemComic item={item} />;
   };
 
   return (
-    <SafeAreaView>
-      <Text>List Comics</Text>
-      {favoriteChar.comics.items.map(comicListItem)}
+    <SafeAreaView style={styles.mainContainer}>
+      <ScrollView>{comics.map(comicListItem)}</ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  mainContainer: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: Colors.BACKGROUND,
   },
 });
 
