@@ -1,18 +1,9 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './src/scenes/home';
 import ListComics from './src/scenes/listComics';
-import {Colors} from './src/styles';
+import SplashScreen from 'react-native-splash-screen';
 
 //Redux
 import reducers from './src/reducers';
@@ -23,7 +14,9 @@ const store = createStore(reducers);
 const Stack = createStackNavigator();
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  React.useEffect(() => {
+    SplashScreen.hide();
+  });
 
   return (
     <Provider store={store}>
