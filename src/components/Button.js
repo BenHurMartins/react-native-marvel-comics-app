@@ -14,7 +14,6 @@ const Button = ({
 }) => {
   const navigation = useNavigation();
 
-  console.log(buttonColor);
   const propsStyles = {
     width: width,
     borderBottomLeftRadius: borderRadiusBottom ? borderRadiusBottom : 0,

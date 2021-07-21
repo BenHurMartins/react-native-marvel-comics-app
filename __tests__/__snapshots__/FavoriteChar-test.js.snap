@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redenring tests for ListComics FavoriteChar snapshot test 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "marginVertical": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#EDF4ED",
+        "borderRadius": 13,
+        "marginBottom": 10,
+        "width": 710,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "#EDF4ED",
+          "color": "#000000",
+          "fontSize": 17,
+          "fontWeight": "bold",
+          "marginHorizontal": 10,
+          "marginTop": 10,
+        }
+      }
+    >
+      Super Ben
+    </Text>
+    <Text
+      style={
+        Object {
+          "backgroundColor": "#EDF4ED",
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "400",
+          "marginBottom": 10,
+          "marginHorizontal": 10,
+          "marginTop": 7,
+          "textAlign": "justify",
+        }
+      }
+    >
+      A react native developer born in 1990;
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#000000",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderColor": "#e62429",
+        "borderWidth": 1,
+        "height": 50,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 710,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      Explore Comics
+    </Text>
+  </View>
+</View>
+`;

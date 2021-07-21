@@ -32,7 +32,6 @@ export const getCharacters = name => {
   });
 };
 export const getCharacterComics = id => {
-  console.log('chamou aqui com id', id);
   return new Promise((resolve, reject) => {
     if (cacheGetCharacterComics[id]) {
       resolve(cacheGetCharacterComics[id]);
@@ -44,7 +43,6 @@ export const getCharacterComics = id => {
           `/characters/${id.toString()}/comics?&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`,
         )
         .then(({data}) => {
-          console.log(data.data.results);
           cacheGetCharacterComics[id] = data.data.results;
           resolve(data.data.results);
         })

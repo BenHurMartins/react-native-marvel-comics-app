@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redenring tests for Home Home snapshot test 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#EDF4ED",
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 13,
+            "flex": 1,
+            "margin": 40,
+            "width": 710,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#e62429",
+              "borderRadius": 13,
+              "height": 26,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 26,
+              "zIndex": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#FFFFFF",
+              }
+            }
+          >
+            X
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+              "marginVertical": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+          List of Comics
+        </Text>
+        <RCTScrollView
+          contentContainerStyle={
+            Object {
+              "paddingBottom": 100,
+            }
+          }
+        >
+          <View />
+        </RCTScrollView>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "bottom": 0,
+                "position": "absolute",
+              },
+              Object {
+                "bottom": 0,
+              },
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder="Character Name"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "borderWidth": 0.5,
+                "height": 50,
+                "paddingHorizontal": 5,
+                "width": 710,
+              }
+            }
+            underlineColorAndroid="transparent"
+            value=""
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#000000",
+                "borderBottomLeftRadius": 5,
+                "borderBottomRightRadius": 5,
+                "borderColor": undefined,
+                "borderWidth": 0,
+                "height": 50,
+                "justifyContent": "center",
+                "opacity": 1,
+                "width": 710,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 20,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              Search Character
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </Modal>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#EDF4ED",
+          "borderRadius": 13,
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "backgroundColor": "#EDF4ED",
+            "color": "#000000",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginHorizontal": 10,
+          }
+        }
+      >
+        Hi!
+      </Text>
+      <Text
+        style={
+          Object {
+            "backgroundColor": "#EDF4ED",
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "marginHorizontal": 10,
+            "marginTop": 7,
+            "textAlign": "justify",
+          }
+        }
+      >
+        Welcome to the Marvel Comics app :)
+      </Text>
+      <Text
+        style={
+          Object {
+            "backgroundColor": "#EDF4ED",
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "marginHorizontal": 10,
+            "marginTop": 7,
+            "textAlign": "justify",
+          }
+        }
+      >
+        This is not an official Marvel app, but here you can choose your favorite character and find every comics related to this hero, or perhaps villain!
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 3,
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#000000",
+          "borderBottomLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderColor": "#e62429",
+          "borderWidth": 1,
+          "height": 50,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 710,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 20,
+            },
+            undefined,
+          ]
+        }
+      >
+        Choose Character
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

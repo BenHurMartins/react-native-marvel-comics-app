@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redenring tests for ListComics Items ListComics snapshot test 1`] = `
+Array [
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 50,
+        "justifyContent": "flex-start",
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      height={40}
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "https/landscape_small.jpg",
+        }
+      }
+      style={
+        Object {
+          "borderColor": "#000000",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "marginHorizontal": 10,
+        }
+      }
+      width={40}
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "fontSize": 15,
+            "fontWeight": "bold",
+            "height": 20,
+            "width": 670,
+          }
+        }
+      >
+        mock comics
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 10,
+            "fontWeight": "300",
+            "height": 12,
+          }
+        }
+      >
+        Print Price: 1.99
+      </Text>
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#000000",
+        "height": 0.5,
+        "justifyContent": "center",
+        "width": "90%",
+      }
+    }
+  />,
+]
+`;

@@ -3,14 +3,10 @@ import {TouchableOpacity, Image, Text, StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Colors, Dimensions} from '../styles';
 
-const ListItem = ({item, callback}) => {
-  const navigation = useNavigation();
+const ListItem = ({item}) => {
   return (
     <>
-      <TouchableOpacity
-        style={styles.listItemContainer}
-        // onPress={() => callback(item)}
-      >
+      <TouchableOpacity style={styles.listItemContainer}>
         <Image
           style={styles.image}
           resizeMode={'cover'}
